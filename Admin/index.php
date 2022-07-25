@@ -1,15 +1,15 @@
 <?php 
- require '../demo/includes/database.php';
+ require 'includes/database.php';
  $data = new database();
  if(isset($_GET['logout'])){
     setcookie('email', '', $time_php - 100 * 60 * 60);
     setcookie('id_user', '', $time_php - 100 * 60 * 60);
     session_destroy();
-    header('location: http://127.0.0.1/PHP/NguyenHongHa/DoAn2/Backend/demo');
+    header('location: http://127.0.0.1/PHP/NguyenHongHa/Blog_demo/CuoiKi/Admin/');
     exit;
  }
  if(isset($_COOKIE['email'])){
-    header('location: http://127.0.0.1/PHP/NguyenHongHa/DoAn2/Backend/demo/listPost.php');
+    header('location: http://127.0.0.1/PHP/NguyenHongHa/Blog_demo/CuoiKi/Admin/listPost.php');
  }
  if(isset($_POST['email'])){
     try{
@@ -18,7 +18,7 @@
             setcookie("email", $_POST['email'], time() + (86400 * 30));
             setcookie("id_user", $isLogin['id_user'], time() + (86400 * 30));
             echo $isLogin['id_user'];
-            header('location: http://127.0.0.1/PHP/NguyenHongHa/DoAn2/Backend/demo/listPost.php');
+            header('location: http://127.0.0.1/PHP/NguyenHongHa/Blog_demo/CuoiKi/Admin/listPost.php');
             
         }
         else{
