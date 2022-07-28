@@ -6,7 +6,7 @@
      $data = new database();
      $dataPost = $data->selectPostId($_GET["id_post"]);
  }else{
-     header("location: http://127.0.0.1/PHP/NguyenHongHa/DoAn2/Backend/demo/listPost.php" ); 
+     header("location: https://blogsha.herokuapp.com/listPost.php" ); 
  }
     require '../demo/theme/header.php';
    

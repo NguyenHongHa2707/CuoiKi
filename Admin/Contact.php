@@ -1,19 +1,19 @@
 <?php 
-require '../demo/includes/database.php';
+ require 'includes/database.php';
 $data = new database();
 if(isset($_POST['id_delete'])){
     try{
         $data->detetePost($_POST['id_delete']);
         echo "oke";
-    }catch(Exception $E){
-        echo "thatbai";
+     }catch(Exception $E){
+         echo "thatbai";
+     }
+     exit;
     }
-    exit;
-}
-if(isset($_GET['xoa'])){
-    $thongbao = "Xóa thành công";
-}
-    require '../demo/theme/header.php';
+    if(isset($_GET['xoa'])){
+      $thongbao = "Xóa thành công";
+    }
+        require 'header.php';
 
 ?>
             <section class="au-breadcrumb m-t-75">
@@ -66,7 +66,7 @@ if(isset($_GET['xoa'])){
                                     </tr>
                                 </thead>                                        
                                 <tbody>
-                                    <?php
+                                    <?php 
                                     $number = 0; 
                                        foreach ($data->selectReport() as $report) {
                                         $number++;    
@@ -78,7 +78,7 @@ if(isset($_GET['xoa'])){
                                             <td>'.$report['mess'].'</td>
                                         </tr> 
                                             ';
-                                    }
+                                    } 
                                     ?>
                                 </tbody>
                             </table>
@@ -92,7 +92,7 @@ if(isset($_GET['xoa'])){
         </section>
         
     <?php 
-    require '../demo/theme/footer.php';
+    require 'theme/footer.php';
 ?>
 <script>
     function handleDialog(){
@@ -101,10 +101,10 @@ if(isset($_GET['xoa'])){
     function handleClickDelete(value){
         $.ajax({
             type : "POST",  //type of method
-            url  : "../demo/listPost.php",  //your page
+            url  : "listPost.php",  //your page
             data : { id_delete : value},// passing the values
             success: function(res){  
-                                    window.location.replace("http://localhost/DoAn2/Backend/demo/listPost.php?xoa=true");
+                                    window.location.replace("https://blogsha.herokuapp.com/listPost.php?xoa=true");
                     }
         });
     }

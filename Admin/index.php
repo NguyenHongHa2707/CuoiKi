@@ -5,11 +5,11 @@
     setcookie('email', '', $time_php - 100 * 60 * 60);
     setcookie('id_user', '', $time_php - 100 * 60 * 60);
     session_destroy();
-    header('location: http://127.0.0.1/PHP/NguyenHongHa/Blog_demo/CuoiKi/Admin/');
+    header('location: hhttps://blogsha.herokuapp.com/Admin/');
     exit;
  }
  if(isset($_COOKIE['email'])){
-    header('location: http://127.0.0.1/PHP/NguyenHongHa/Blog_demo/CuoiKi/Admin/listPost.php');
+    header('location: https://blogsha.herokuapp.com/listPost.php');
  }
  if(isset($_POST['email'])){
     try{
@@ -18,7 +18,7 @@
             setcookie("email", $_POST['email'], time() + (86400 * 30));
             setcookie("id_user", $isLogin['id_user'], time() + (86400 * 30));
             echo $isLogin['id_user'];
-            header('location: http://127.0.0.1/PHP/NguyenHongHa/Blog_demo/CuoiKi/Admin/listPost.php');
+            header('location: https://blogsha.herokuapp.com/listPost.php');
             
         }
         else{

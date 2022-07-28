@@ -5,7 +5,7 @@ if(isset($_GET["id_post"])){
     $data = new database();
     $dataPost = $data->selectPostId($_GET["id_post"]);
 }else{
-    header("location: http://localhost/DoAn2/FrontEnd/blog.php" ); 
+    header("location: https://blogsha.herokuapp.com/blog.php" ); 
 }
 ?>
 <!DOCTYPE HTML>

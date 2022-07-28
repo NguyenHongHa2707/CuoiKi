@@ -169,7 +169,7 @@ if(isset($_POST['id_delete'])){
             url  : "../demo/listCategories.php",  //your page
             data : { id : value, category_title:category_title,category_description_title:category_description_title },// passing the values
             success: function(res){  
-                window.location.replace("http://localhost/DoAn2/Backend/demo/listCategories.php?xoa=true");
+                window.location.replace("https://blogsha.herokuapp.com/listCategories.php?xoa=true");
                     }
         });
     }
@@ -179,7 +179,7 @@ if(isset($_POST['id_delete'])){
             url  : "../demo/listCategories.php",  //your page
             data : { id_delete : value},// passing the values
             success: function(res){  
-                window.location.replace("http://localhost/DoAn2/Backend/demo/listCategories.php?xoa=true");
+                window.location.replace("https://blogsha.herokuapp.com/listCategories.php?xoa=true");
                     }
         });
     }

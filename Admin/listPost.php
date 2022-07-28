@@ -1,5 +1,6 @@
 <?php 
-require '../demo/includes/database.php';
+// include '../demo/includes/database.php';
+include 'includes/database.php';
 $data = new database();
 if(isset($_POST['id_delete'])){
     try{
@@ -13,7 +14,7 @@ if(isset($_POST['id_delete'])){
 if(isset($_GET['xoa'])){
     $thongbao = "Xóa thành công";
 }
-    require '../demo/theme/header.php';
+    require 'theme/header.php';
 
 ?>
             <section class="au-breadcrumb m-t-75">
@@ -122,7 +123,7 @@ if(isset($_GET['xoa'])){
         </section>
         
     <?php 
-    require '../demo/theme/footer.php';
+    require 'theme/footer.php';
 ?>
 <script>
     function handleDialog(){
@@ -131,10 +132,11 @@ if(isset($_GET['xoa'])){
     function handleClickDelete(value){
         $.ajax({
             type : "POST",  //type of method
-            url  : "../demo/listPost.php",  //your page
+            url  : " listPost.php",  //your page
             data : { id_delete : value},// passing the values
             success: function(res){  
                                     window.location.replace("http://127.0.0.1/PHP/NguyenHongHa/DoAn2/Backend/demo/listPost.php?xoa=true");
+                                   
                     }
         });
     }

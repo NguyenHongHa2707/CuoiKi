@@ -2,7 +2,7 @@
 <?php
      if(!isset($_COOKIE['email'])){
         
-        header('location: http://127.0.0.1/PHP/NguyenHongHa/DoAn2/Backend/demo');
+        header('location: https://blogsha.herokuapp.com');
      }else{
         $id_user = $_COOKIE['id_user'];
         $email =  $_COOKIE['email'];
