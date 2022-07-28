@@ -4,7 +4,7 @@
         public $conn;
         public $severName  = "bklbrb259rl7ne9gdwir-mysql.services.clever-cloud.com";
         public  $userName = "uf5kzzltypxtsou1";
-        public  $passWord ="AqvQhpMrrXFASuyXrxSx";
+        public  $passWord ="uf5kzzltypxtsou1";
         public  $databaseName ="bklbrb259rl7ne9gdwir";
 
         function __construct()
